@@ -170,6 +170,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 40px;
 }
 
 .iconos #clip {
@@ -190,7 +191,6 @@ button {
   background: none;
   width: 50rem;
   height: 50rem;
-  boder: 1px solid red;
 }
 
 .chat {
