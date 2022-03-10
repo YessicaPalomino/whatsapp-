@@ -21,12 +21,16 @@ html, body
     width: 100%
     height: 100%
     box-sizing: content-box
+    overflow: hidden
+    display: flex
+    justify-content: center
 
 .container
     display: flex
     flex-flow: column
-    height: 100%
-    width: 100%
+    overflow: hidden
+    // height: 100%
+    // width: 100%
 
     nav
         background-color: #008069
@@ -85,7 +89,41 @@ html, body
                 background: none
                 border: none
                 color: white
-                width: 3rem
+                width: 1rem
+    #camara
+
+        overflow-y: scroll
+        opacity: 1
+        width: 100vw
+        height: calc( 100vh - 5rem )
+        overflow: auto
+
+        span
+            position: absolute
+            right: 2rem
+            bottom: 1.2rem
+            width: 3rem
+            height: 3rem
+            text-align: center
+            line-height: 2.1
+            border-radius: 100%
+            color: white
+            background: #008069
+
+            //  background-color: #25d366
+            //  background-color: #00a884
+
+        article
+            position: relative
+            height: 3.3rem
+            margin: 0.6rem
+            display: flex
+            flex-flow: row
+
+            div
+                width: 82%
+                padding: 0.25rem
+
 
     #section-chats
 
@@ -183,12 +221,14 @@ html, body
         color: #455A64
 
 main
-    width: 100%
-    height: calc( 100% - 5rem )
-    overflow: auto
+    // width: 100%
+    // height: calc( 100% - 5rem )
+    overflow-x: auto
+    overflow-y: hidden
+    display: flex
 
 .container-main
-    width: 300%
+    width: 400%
     height: 100%
     display: flex
     flex-flow: row

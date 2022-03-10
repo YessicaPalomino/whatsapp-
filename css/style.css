@@ -28,6 +28,13 @@ html, body {
   height: 100%;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container {
@@ -38,8 +45,7 @@ html, body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  height: 100%;
-  width: 100%;
+  overflow: hidden;
 }
 
 .container nav {
@@ -117,7 +123,46 @@ html, body {
   background: none;
   border: none;
   color: white;
+  width: 1rem;
+}
+
+.container #camara {
+  overflow-y: scroll;
+  opacity: 1;
+  width: 100vw;
+  height: calc( 100vh - 5rem);
+  overflow: auto;
+}
+
+.container #camara span {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.2rem;
   width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 2.1;
+  border-radius: 100%;
+  color: white;
+  background: #008069;
+}
+
+.container #camara article {
+  position: relative;
+  height: 3.3rem;
+  margin: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.container #camara article div {
+  width: 82%;
+  padding: 0.25rem;
 }
 
 .container #section-chats {
@@ -239,13 +284,15 @@ html, body {
 }
 
 main {
-  width: 100%;
-  height: calc( 100% - 5rem);
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container-main {
-  width: 300%;
+  width: 400%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
